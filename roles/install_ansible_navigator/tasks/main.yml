@@ -16,6 +16,7 @@
     name: ansible-navigator
     extra_args: --user
   become_user: "{{ v_install_ansible_navigator_username }}"
+  become: true
 
 - name: Ensure export path in profile
   ansible.builtin.lineinfile:
@@ -29,3 +30,4 @@
   args:
     executable: /bin/bash
   become_user: "{{ v_install_ansible_navigator_username }}"
+  become: true
